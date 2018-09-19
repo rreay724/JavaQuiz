@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
+    /** Method to check answers once submit button is pressed **/
     public void submitAnswers(View view) {
 
         TextView question1 = findViewById(R.id.question1);
@@ -62,6 +63,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    /** Method to calculate number of points from correct answers**/
     private int countPoints(boolean correctChecked1, boolean correctChecked2, boolean correctChecked3, boolean correctChecked4) {
         int correctPoints = 0;
         TextView question1 = findViewById(R.id.question1);
