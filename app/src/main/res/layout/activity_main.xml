@@ -1,20 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fillViewport="true">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:orientation="vertical"
+    android:scrollbars="vertical"
     tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/question1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="40dp"
         android:text="String is the data type used to store a number."
         android:textColor="@android:color/black"
-        android:textSize="18sp" />
+        android:textSize="24sp" />
 
     <CheckBox
         android:id="@+id/trueCheckBox1"
@@ -25,7 +35,7 @@
         android:layout_marginTop="16dp"
         android:paddingLeft="16dp"
         android:text="True"
-        android:textSize="14sp" />
+        android:textSize="20sp" />
 
     <CheckBox
         android:id="@+id/falseCheckBox1"
@@ -37,7 +47,7 @@
         android:layout_marginTop="16dp"
         android:paddingLeft="16dp"
         android:text="False"
-        android:textSize="14sp" />
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/question2"
@@ -46,7 +56,7 @@
         android:layout_margin="8dp"
         android:text="Boolean is the data type used to store a true or false statement"
         android:textColor="@android:color/black"
-        android:textSize="18sp" />
+        android:textSize="24sp" />
 
     <CheckBox
         android:id="@+id/trueCheckBox2"
@@ -57,7 +67,7 @@
         android:layout_marginTop="16dp"
         android:paddingLeft="16dp"
         android:text="True"
-        android:textSize="14sp" />
+        android:textSize="20sp" />
 
     <CheckBox
         android:id="@+id/falseCheckBox2"
@@ -69,7 +79,7 @@
         android:layout_marginTop="16dp"
         android:paddingLeft="16dp"
         android:text="False"
-        android:textSize="14sp" />
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/question3"
@@ -78,7 +88,7 @@
         android:layout_margin="8dp"
         android:text="A method is a set of code which is referred to by name and can be called at any point in a program"
         android:textColor="@android:color/black"
-        android:textSize="18sp" />
+        android:textSize="24sp" />
 
     <CheckBox
         android:id="@+id/trueCheckBox3"
@@ -89,7 +99,7 @@
         android:layout_marginTop="16dp"
         android:paddingLeft="16dp"
         android:text="True"
-        android:textSize="14sp" />
+        android:textSize="20sp" />
 
     <CheckBox
         android:id="@+id/falseCheckBox3"
@@ -101,7 +111,7 @@
         android:layout_marginTop="16dp"
         android:paddingLeft="16dp"
         android:text="False"
-        android:textSize="14sp" />
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/question4"
@@ -110,7 +120,7 @@
         android:layout_margin="8dp"
         android:text="int number = 5; is a correct example of an int variable"
         android:textColor="@android:color/black"
-        android:textSize="18sp" />
+        android:textSize="24sp" />
 
     <CheckBox
         android:id="@+id/trueCheckBox4"
@@ -121,7 +131,7 @@
         android:layout_marginTop="16dp"
         android:paddingLeft="16dp"
         android:text="True"
-        android:textSize="14sp" />
+        android:textSize="20sp" />
 
     <CheckBox
         android:id="@+id/falseCheckBox4"
@@ -133,7 +143,7 @@
         android:layout_marginTop="16dp"
         android:paddingLeft="16dp"
         android:text="False"
-        android:textSize="14sp" />
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/scoreText"
@@ -141,7 +151,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:text="Score"
-        android:textSize="18sp"
+        android:textSize="24sp"
         android:textStyle="bold" />
 
     <TextView
@@ -151,7 +161,7 @@
         android:layout_marginLeft="16dp"
         android:text="0"
         android:textColor="@android:color/black"
-        android:textSize="14sp" />
+        android:textSize="24sp" />
 
     <Button
         android:id="@+id/submitAnswerButton"
@@ -160,6 +170,7 @@
         android:layout_margin="16dp"
         android:onClick="submitAnswers"
         android:text="Submit Answer"
-        android:textSize="18sp" />
+        android:textSize="24sp" />
 
 </LinearLayout>
+</ScrollView>
