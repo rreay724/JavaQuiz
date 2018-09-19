@@ -16,7 +16,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    /** Method to check answers once submit button is pressed **/
+    /**
+     * Method to check answers once submit button is pressed
+     **/
     public void submitAnswers(View view) {
 
         TextView question1 = findViewById(R.id.question1);
@@ -44,16 +46,17 @@ public class MainActivity extends AppCompatActivity {
         CheckBox question4CheckedIncorrect = findViewById(R.id.falseCheckBox4);
         boolean question4Incorrect = question4CheckedIncorrect.isChecked();
 
-        if (question1Incorrect){
+        // This will mark any questions red that were answered incorrectly
+        if (question1Incorrect) {
             question1.setTextColor(Color.RED);
         }
-        if (question2Incorrect){
+        if (question2Incorrect) {
             question2.setTextColor(Color.RED);
         }
-        if (question3Incorrect){
+        if (question3Incorrect) {
             question3.setTextColor(Color.RED);
         }
-        if (question4Incorrect){
+        if (question4Incorrect) {
             question4.setTextColor(Color.RED);
         }
 
@@ -63,7 +66,9 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    /** Method to calculate number of points from correct answers**/
+    /**
+     * Method to calculate number of points from correct answers
+     **/
     private int countPoints(boolean correctChecked1, boolean correctChecked2, boolean correctChecked3, boolean correctChecked4) {
         int correctPoints = 0;
         TextView question1 = findViewById(R.id.question1);
@@ -91,9 +96,71 @@ public class MainActivity extends AppCompatActivity {
         return correctPoints;
     }
 
+    /**
+     * Method to display number of correct points in the score TextView
+     **/
     private void displayPoints(int number) {
         TextView pointsTextView = findViewById(R.id.scoreView);
         pointsTextView.setText("" + number);
+    }
+
+    public void resetQuiz (View view){
+        TextView question1 = findViewById(R.id.question1);
+        TextView question2 = findViewById(R.id.question2);
+        TextView question3 = findViewById(R.id.question3);
+        TextView question4 = findViewById(R.id.question4);
+
+        // Data for correct checkbox answers
+        CheckBox question1Checked = findViewById(R.id.falseCheckBox1);
+        boolean question1Correct = question1Checked.isChecked();
+        CheckBox question2Checked = findViewById(R.id.trueCheckBox2);
+        boolean question2Correct = question2Checked.isChecked();
+        CheckBox question3Checked = findViewById(R.id.trueCheckBox3);
+        boolean question3Correct = question3Checked.isChecked();
+        CheckBox question4Checked = findViewById(R.id.trueCheckBox4);
+        boolean question4Correct = question4Checked.isChecked();
+
+        // Data for incorrect checkbox answers
+        CheckBox question1CheckedIncorrect = findViewById(R.id.trueCheckBox1);
+        boolean question1Incorrect = question1CheckedIncorrect.isChecked();
+        CheckBox question2CheckedIncorrect = findViewById(R.id.falseCheckBox2);
+        boolean question2Incorrect = question2CheckedIncorrect.isChecked();
+        CheckBox question3CheckedIncorrect = findViewById(R.id.falseCheckBox3);
+        boolean question3Incorrect = question3CheckedIncorrect.isChecked();
+        CheckBox question4CheckedIncorrect = findViewById(R.id.falseCheckBox4);
+        boolean question4Incorrect = question4CheckedIncorrect.isChecked();
+
+        question1.setTextColor(Color.BLACK);
+        question2.setTextColor(Color.BLACK);
+        question3.setTextColor(Color.BLACK);
+        question4.setTextColor(Color.BLACK);
+
+        if (question1Correct){
+            question1Checked.setChecked(false);
+        }
+        if (question2Correct){
+            question2Checked.setChecked(false);
+        }
+        if (question3Correct){
+            question3Checked.setChecked(false);
+        }
+        if (question4Correct){
+            question4Checked.setChecked(false);
+        }
+        if (question1Incorrect){
+            question1CheckedIncorrect.setChecked(false);
+        }
+        if (question2Incorrect){
+            question2CheckedIncorrect.setChecked(false);
+        }
+        if (question3Incorrect){
+            question3CheckedIncorrect.setChecked(false);
+        }
+        if (question4Incorrect){
+            question4CheckedIncorrect.setChecked(false);
+        }
+
+        displayPoints(0);
     }
 
 }

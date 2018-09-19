@@ -172,5 +172,15 @@
         android:text="Submit Answer"
         android:textSize="24sp" />
 
+    <Button
+        android:id="@+id/resetButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="Reset Quiz"
+        android:onClick="resetQuiz"
+        android:textSize="24sp" />
+
+
 </LinearLayout>
 </ScrollView>
